@@ -1,0 +1,56 @@
+ascli \
+    server \
+    upload /docroot/hello.txt \
+    --progress=none \
+    --url=ssh://168.1.21.210:22 \
+    --username=root \
+    --ssh-keys=$HOME/.ssh/aspera \
+    --to-folder=/root/transfers \
+    --insecure=yes \
+    --ts=@json:'{"target_rate_kbps":100000}' \
+    --transfer=node \
+    --transfer-info=@json:'{"url":"https://158.175.103.59:9092","username":"gEMtMfyagLghBCCVWz-ijNcxaCAh8","password":"t6gFzUFaLNj6axDVby6"}'
+
+
+
+ssh-keygen -p -f aspera -m pem
+
+
+ascli node \
+    --insecure=yes \
+    --url=https://158.175.103.59:9092 \
+    --username=gEMtMfyagLghBCCVWz-ijNcxaCAh8 \
+    --password=t6gFzUFaLNj6axDVby6 \
+    br /
+
+
+ascli conf \
+    preset \
+    update \
+    sydney-hsts \
+    --url=ssh://168.1.21.210:22 \
+    --username=root \
+    --ssh-keys=$HOME/.ssh/aspera 
+
+ascli \
+    conf \
+    preset \
+    update \
+    london-node \
+    --insecure=yes \
+    --url=https://158.175.103.59:9092 \
+    --username=gEMtMfyagLghBCCVWz-ijNcxaCAh8 \
+    --password=t6gFzUFaLNj6axDVby6 
+
+ascli conf preset set default server sydney-hsts
+ascli conf preset set default node london-node
+
+ascli \
+    server \
+    upload /docroot/hello.txt \
+    --preset=sydney-hsts \
+    --to-folder=/root/transfers \
+    --transfer=node \
+    --transfer-info=@preset:london-node
+
+ascli server upload "/docroot/fdsdf - 4eb61038-7a26-4b59-ab49-251797a68bea.aspera-package/PKG - fdsdf" --progress=none --url=ssh://168.1.21.210:22 --username=root --ssh-keys=/Users/bencornwell/.ssh/Aspera --to-folder=/root/transfers --insecure=yes --ts=@json:'{"target_rate_kbps": 100000 }\ --transfer=node --transfer-info=@json:'{"url":"https://158.175.103.59:9092","username":"gEMtMfyagLghBCCVWz-ijNcxaCAh8","password":"t6gFzUFaLNj6axDVby6"}'

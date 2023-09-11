@@ -1,2 +1,4 @@
 #!/bin/bash
-podman build -t webhook-example .
+docker build -t webhook-example .
+
+

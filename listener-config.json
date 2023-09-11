@@ -1,0 +1,7 @@
+{
+    "url": "http://:8080/processing",
+    "processing" : {
+        "script_folder": "/scripts"
+    }
+}
+
