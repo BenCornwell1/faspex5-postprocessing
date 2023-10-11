@@ -1,8 +1,7 @@
 #!/bin/bash
 
 PRIVATE_KEY=$HOME/.ssh/Aspera
-#SOURCE_ROOT=${faspex_pkg_directory}
-SOURCE_ROOT="/docroot/fdsdf - 4eb61038-7a26-4b59-ab49-251797a68bea.aspera-package/PKG - fdsdf"
+SOURCE_ROOT=${faspex_pkg_directory}
 DEST_ROOT=/root/transfers
 SOURCE_HOST=https://158.175.103.59:9092
 DEST_HOST=ssh://168.1.21.210:22
