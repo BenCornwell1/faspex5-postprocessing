@@ -1,9 +1,9 @@
 #!/bin/bash
 
-PRIVATE_KEY=$HOME/.ssh/Aspera
+PRIVATE_KEY=$HOME/keys/aspera
 SOURCE_ROOT=${faspex_pkg_directory}
 DEST_ROOT=/root/transfers
-SOURCE_HOST=https://<source-ip<
+SOURCE_HOST=https://<source-ip>
 DEST_HOST=ssh://<dest-ip>
 DEST_USERNAME=root
 SOURCE_USERNAME=xxx
