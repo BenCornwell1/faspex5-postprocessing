@@ -3,11 +3,11 @@
 PRIVATE_KEY=$HOME/.ssh/Aspera
 SOURCE_ROOT=${faspex_pkg_directory}
 DEST_ROOT=/root/transfers
-SOURCE_HOST=https://158.175.103.59:9092
-DEST_HOST=ssh://168.1.21.210:22
+SOURCE_HOST=https://<source-ip<
+DEST_HOST=ssh://<dest-ip>
 DEST_USERNAME=root
-SOURCE_USERNAME=gEMtMfyagLghBCCVWz-ijNcxaCAh8
-SOURCE_PASSWORD=t6gFzUFaLNj6axDVby6
+SOURCE_USERNAME=xxx
+SOURCE_PASSWORD=yyy
 TARGET_RATE=100000
 
 TRANSFER_SPEC='{"target_rate_kbps":'"$TARGET_RATE"'}'
