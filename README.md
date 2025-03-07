@@ -19,7 +19,7 @@ For example, if a Faspex 4 post-processing script would copy a recieved file fro
 
 Clone this repository to a suitable working directory on the Faspex server e.g. your home directory
 
-Faspex 5 should be installed and configured with an HSTS node.  It is vital to follow the instructions for [configuring an HSTS node for Faspex](https://www.ibm.com/docs/en/aspera-faspex/5.0.6?topic=storage-configuring-linux-node-faspex).  These instructions set up a Node API user, and for the container method we will need the HTTP URL, the node username and the associated password to run the scripts.  The ascli command we will use relies on the Node API.
+Faspex 5 should be installed and configured with an HSTS node.  It is vital to follow the instructions for [configuring an HSTS node for Faspex]([https://www.ibm.com/docs/en/aspera-faspex/5.0.6?topic=storage-configuring-linux-node-faspex](https://www.ibm.com/docs/en/aspera-faspex/5.0?topic=storage-configuring-linux-node-faspex)).  These instructions set up a Node API user, and for the container method we will need the HTTP URL, the node username and the associated password to run the scripts.  The ascli command we will use relies on the Node API.
 
 ## Instructions to install the sample
 
